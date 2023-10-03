@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment with Dr</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file for styling -->
+    <style>
+        /* CSS for colorless borders on text fields */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            border: none; /* Remove the default border */
+            border-bottom: 1px solid #ccc; /* Add a 1px gray border at the bottom */
+            padding: 5px; /* Adjust padding as needed */
+            width: 100%;
+            margin-bottom: 15px; /* Adjust spacing between fields */
+        }
+        *{
+    margin:0;
+    padding: 2;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+   
+    background-color: rgb(235, 230, 224);
+}
+/* h2{
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: hsl(233,26%,24%);
+    text-align:center;
+    justify-content: center;
+
+} */
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    background-color: fff;
+}
+.slide-content{
+    margin: 0 40px;
+}
+.card{
+    width: 320px;
+    border-radius: 25px;
+    background-color: #FFF;
+}
+.image-content,.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+
+}
+.image-content{
+    row-gap: 5px;
+    position: relative;
+   
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #4070f4;
+    border-radius: 25px 25px 0 25px;
+}
+.overlay::before,.overlay::after{
+    content: '';
+    position: absolute;
+    height: 40px;
+    right: 0;
+    width: 40px;
+    bottom: -40px;
+    background-color: #4070f4;
+}
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color:#FFF;
+}
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #FFF;
+    padding: 3px;
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4070f4;
+}
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+.description{
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+
+}
+.button{
+    border: none;
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px 16px;
+    background-color: #4070f4;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button:hover{
+    background: #265df2;
+    
+}
+@media(max-width: 1060px){
+    .slide-container{
+        width: 40%;
+        padding: 10px;
+    }
+    
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Appointment with Dr.Fred Mwesigwa</h1>
+    </header>
+    <section class="appointment-details">
+        <h2>Appointment Details</h2>
+        <p>Date:03/10/2023</p>
+        <p>Doctor: Eric Oradi</p>
+        <p>Location:Power Clinic</p>
+    </section>
+    <section class="patient-info">
+        <h2>Patient Information</h2>
+        <form action="confirm-appointment.php" method="post">
+            <label for="patient-name">Name:</label>
+            <input type="text" id="patient-name" name="patient-name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="reason">Reason for Visit:</label>
+            <textarea id="reason" name="reason" rows="4" required></textarea>
+
+            <label for="language">Preferred Language:</label>
+            <select id="language" name="language">
+                <option value="english">English</option>
+                <option value="spanish">Kiswahili</option>
+                <option value="french">Luganda</option>
+                <option value="german">Runyakore</option>
+                <option value="other">Other</option>
+            </select>
+
+            <button type="button" onclick="window.alert( 'Thanks For Choosing Power Clinic Services. We are glad to serve you. ')">Confirm Appointment</button>
+        </form>
+    </section>
+</body>
+</html>
