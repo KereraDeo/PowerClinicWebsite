@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Power Clinic Patients Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('images/patient.jpg'); /* Replace 'background-image.jpg' with the actual image file path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.7); /* Add some opacity to make the text more readable */
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .welcome {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .services {
+            font-size: 18px;
+        }
+
+        .services ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .services ul li::before {
+            content: "\2022"; /* Use a bullet point (•) as a list marker */
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="welcome">Welcome, [User's Name]!</h1>
+        <div class="services">
+            <p>Your available services:</p>
+            <ul>
+                <li>First Birth Care</li>
+                <li>Prenatal Services</li>
+                <li>Postnatal Services</li>
+                <li>Checkups</li>
+                <li>Pregnancy Services</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
